@@ -1,9 +1,8 @@
-New Old Stock Fetch
+Tumblr Photo Fetch
 ==============
 
-A simple script to download pictures from the tumblelog [New Old Stock](http://nos.twnsnd.co/).
+A simple script to download pictures from the Tumblr Photo Blogs (works great with [New Old Stock](http://nos.twnsnd.co/)).
 Runs in the background with launchd on OS X, could be adapted on other systems.
-Basically a fork of [Unsplash Fetch](https://github.com/mcdado/unsplash-dl)
 
 Setup
 -----
@@ -16,9 +15,11 @@ Setup
 5. Execute: `launchctl load ~/Library/LaunchAgents/com.mcdado.newoldstock.plist`
 6. Setup your preferred OS X Screensaver to look into `"~/Pictures/New Old Stock"`
 
+If you want to point to another Tumblr blog, edit the file `newoldstock-dl.php` and change the domain of `http://nos.twnsnd.co/api/read` to any other blog.
+
 Notes
 -----
 
 * I assume you are using homebrew's php. If you're not, edit the file `unsplash-dl.php` at the first line with `#!/usr/bin/php`;
 * The script requires [pecl\_http v2](http://pecl.php.net/package/pecl_http). You can install pecl_http with homebrew (php5*-http) or via PECL.
-* The code is quite smelly, but it's that way because it is an experiment and I wanted to make it work quickly... any suggestions and improvements are welcome.
+* This is distributed as is. It's quite a hack. Use at your own peril.
